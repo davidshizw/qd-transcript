@@ -2,6 +2,10 @@
 
 ## 系统构成
 
+```diff
+- 非常重要：在您运行系统选取文件时，请确保您选取的文件不处于打开状态，否则系统不会响应您的操作。
+```
+
 transcript-generator.jar - 成绩单自动生成系统
 
 Template.xlsx - 成绩导入模版
@@ -12,9 +16,9 @@ transcript_template.pdf - 空成绩单模版
       
 ## 提前准备
 
-点击页面右上角“Clone or download”按钮下载整个项目至一个压缩文件
+点击页面右上角“Clone or download”按钮下载整个项目至一个压缩文件；
 
-解压后双击运行transcript-generator.jar并根据提示操作即可
+解压后双击运行transcript-generator.jar并根据提示操作即可。
 
 ## 成绩输入
 
@@ -32,7 +36,7 @@ transcript_template.pdf - 空成绩单模版
 
 您不可以在表单中实行合并单元格操作；
 
-您不可以重命名表单名称，系统只能识别Info，G10，G11和G12表单；
+您不可以重命名表单名称，系统只能识别Info、G10、G11和G12表单；
 
 您需要确保学生的个人和成绩信息都分别保存在了所有的表单中。
 
@@ -45,4 +49,3 @@ transcript_template.pdf - 空成绩单模版
 对于Info表单：
 
       您不能修改Info表单中任何列，所谓修改包括顺序和内容。
-
