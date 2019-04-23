@@ -1,0 +1,69 @@
+package jumpstart;
+
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfReader;
+import com.itextpdf.kernel.pdf.PdfWriter;
+
+import com.itextpdf.kernel.font.PdfFont;
+import com.itextpdf.kernel.font.PdfFontFactory;
+import com.itextpdf.io.font.FontProgram;
+import com.itextpdf.io.font.FontProgramFactory;
+import com.itextpdf.io.font.PdfEncodings;
+
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.property.TextAlignment;
+import java.io.File;
+
+public class Transcript {
+    public static final String DEST = "results/chapter01/test.pdf";
+    public static final String SRC = "results/chapter01/transcript_template.pdf";
+    public static void main(String[] args) throws Exception {
+        File file = new File(DEST);
+        file.getParentFile().mkdirs();
+        new Transcript().manipulatePdf(DEST);
+    }
+
+    protected void manipulatePdf(String dest) throws Exception {
+    	FontProgram fontProgram = FontProgramFactory.createFont("resources/fonts/calibri.ttf");
+    	PdfFont font = PdfFontFactory.createFont(fontProgram, PdfEncodings.WINANSI, true);
+    	
+    	float offset = (float) 13.9;
+    	
+        PdfDocument pdfDoc = new PdfDocument(new PdfReader(SRC), new PdfWriter(DEST));
+        Document doc = new Document(pdfDoc);
+        //G10
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - 2 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - 3 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - 4 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - 5 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - 6 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics HL"), (float) 43, (float) 525 - 7 * offset, TextAlignment.LEFT);
+
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 2 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 3 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 4 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 5 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 6 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 7 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 8 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 9 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 10 * offset, TextAlignment.CENTER);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("7"), (float) 190, (float) 525 - 11 * offset, TextAlignment.CENTER);
+
+        //G11
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics"), (float) 43, (float) 525, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics"), (float) 43, (float) 525 - offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics"), (float) 43, (float) 525 - 2 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics"), (float) 43, (float) 525 - 3 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics"), (float) 43, (float) 525 - 4 * offset, TextAlignment.LEFT);
+        doc.showTextAligned(new Paragraph().setFont(font).setFontSize(11).add("IB Economics"), (float) 43, (float) 525 - 5 * offset, TextAlignment.LEFT);
+
+        doc.close();
+    }
+}
+
